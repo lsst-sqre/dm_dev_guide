@@ -5,7 +5,7 @@ Supported Platforms
 Introduction
 ============
 
-The Science Pipelines are required to be portable across many compute platforms ranging from high-performance computing centers to laptops (refer to DMS-REQ-0308 in :lse:`61`).
+The Science Pipelines are required to be portable across many compute platforms ranging from high-performance computing centers to laptops (refer to DMS-REQ-0308 in `lse-61`_).
 The software will likely work on any Unix-like systems but we limit our testing and support to a fixed set of platforms.
 Patches may be accepted from developers who test on other operating systems.
 
@@ -17,20 +17,22 @@ Platforms
 We have a baseline platform which is what we are using for integration testing and deployments.
 For each product, we also have a number of other platforms which are regularly tested by our continuous integration system to enhance portability.
 
-The baseline platform is currently CentOS 7 on Intel x86_64.
+The baseline platform is currently Almalinux 8 on Intel x86_64.
 
 .. note ::
-    We aim to stay current with CentOS 7 minor releases.
-    Our base OS container will typically be updated to the current CentOS 7 release shortly *after* each major release of the Science Pipelines.
+    We aim to stay current with Almalinux 8 minor releases.
+    Our base OS container will typically be updated to the current Almalinux 8 release shortly *after* each major release of the Science Pipelines.
     Shared development machines will be updated on their own schedule during periodic maintenance downtime.
 
 We regularly test the following platforms in addition to the baseline platform:
 
-* macOS Monterey (12.x);
+* macOS Monterey (12.x).
 * macOS Ventura (13.x).
+* macOS Sonoma (14.x) arm procressor only.
+* Almalinux 8 (aarch).
 
 See https://rubin-ci.slac.stanford.edu/blue for the current list of regularly-tested platforms.
-(The "osx" platform there for the "stack-os-matrix" job randomly chooses a Big Sur or Catalina machine for each execution to limit load.)
+(The "macos-86x" platform there for the "stack-os-matrix" job randomly chooses a Big Sur or Catalina machine for each execution to limit load.)
 
 .. _platforms-environment:
 
@@ -47,3 +49,5 @@ To request that a new package be added to the environment, please :doc:`file an 
 .. _Conda: https://conda.io
 .. _conda-forge: https://conda-forge.org/
 .. _scipipe_conda_env: https://github.com/lsst/scipipe_conda_env
+.. _lse-61: https://lse-61.lsst.io/
+
